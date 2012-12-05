@@ -1,0 +1,86 @@
+@import "twitter/bootstrap/bootstrap";
+@import "twitter/bootstrap/responsive";
+
+// Defaults - see original less file for doc
+@iconSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings.png');
+@iconWhiteSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings-white.png');
+@fontAwesomeEotPath: '/assets/fontawesome-webfont.eot';
+@fontAwesomeWoffPath: '/assets/fontawesome-webfont.woff';
+@fontAwesomeTtfPath: '/assets/fontawesome-webfont.ttf';
+@fontAwesomeSvgPath: '/assets/fontawesome-webfont.svg';
+@import "fontawesome";
+
+// --- > COLORS
+@bodyBackground: #f7faf5;
+@textColor: #000000;
+@btnBackground: #E5E5E5;
+@inputBorder: @grayLight;
+
+// --- > FIXES
+
+// deal with icon wierdness
+[class^="icon-"], [class*=" icon-"]{
+  background:none;
+}
+
+// --- > FORMS
+
+// tighten up form spacing a bit
+// careful - may create problem with .help_block bottom
+.form-horizontal {
+  margin: 0;
+  padding: 0;
+  .control-group {
+    margin-bottom: 5px;
+    .clearfix();
+  }
+}
+// align link with input fields
+.form_align_with_input {
+  padding-left: @horizontalComponentOffset;
+}
+// nowrap labels
+.control-label {
+  white-space: nowrap;
+}
+
+// --- > LAYOUT
+
+@appColumns: 10;
+@appPageWidth: (@gridColumnWidth1200 * @appColumns) + (@gridGutterWidth1200 * (@appColumns - 1));
+
+// need to review grid usage for more bootstrap-ish way to center page?
+.centerPage{
+  background-color:white;
+  position:relative;
+  width: @appPageWidth;
+  height:100%;
+  margin:0 auto;
+  padding:0;
+}
+
+// --- > NAV BAR, TABS
+
+@navbarLinkBackgroundActive: #FFFFFF;
+@navbarLinkColorActive: #000000;
+@navbarLinkColor: @white;
+@navbarBackgroundHighlight: #426E25;
+@navbarBackground: #426E25;
+@navbarLinkColorHover: #cee7f3;
+@dropdownLinkBackgroundHover: #547c3a;
+@dropdownBorder: @grayLight;
+@navbarText: @white;
+
+.navbar-inner {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.navbar {
+  margin:0px;
+}
+
+.nav-tabs {
+  font-weight: bold;
+}
+

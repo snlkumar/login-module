@@ -1,0 +1,20 @@
+<div id="header_links">
+  <%= link_to(image_tag("logo200x50.jpg", :size => "200x50", :alt => "ZoeOberon Solutions", :border=> 0), root_path) %>
+  <span class="header title">RegisterMy.Info</span>
+
+   <span class="header login">
+  
+    <% if user_signed_in? -%>
+      <%= t(:hello, scope: :'myinfo.messages') -%><%= ", #{current_user.username}" -%>
+      (<%=link_to t(:edit_login, scope: :'myinfo.menu'), fb_edit_user_path, :remote => true %> | 
+      <%= link_to t(:logout, scope: :'myinfo.menu'), destroy_user_session_path, :method=>'delete' %>)  
+               
+    <% else -%>
+     <%=link_to t(:sign_up, scope: :'myinfo.menu'), fb_create_user_path, :remote => true %>&nbsp;&nbsp; 
+     (<%= t(:already_registered, scope: :'myinfo.messages') -%> 
+     <%=link_to t(:login, scope: :'myinfo.menu'), fb_login_path, :remote => true %>)
+    <% end -%>
+  &nbsp;&nbsp;&nbsp;</span>
+</div>
+<br />
+<br />

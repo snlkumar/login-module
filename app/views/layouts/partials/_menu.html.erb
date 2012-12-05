@@ -1,0 +1,26 @@
+
+<div class="navbar no_margin">
+  <div class="navbar-inner">
+    <ul class="nav">
+      <li class="<%= active_tab('dashboard') %>"><%= link_to t(:home, scope: :'myinfo.menu'), dashboard_path %></li>
+      <%- if current_user && current_user.role_access?(User.user_role) %>
+        <li><a href="#"><%= t(:messages, scope: :'myinfo.menu') -%></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= t(:profile, scope: :'myinfo.menu') -%><b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#"><%= t(:details, scope: :'myinfo.menu') -%></a></li>
+            <li><a href="#"><%= t(:licensing, scope: :'myinfo.menu') -%></a></li>
+            <li><a href="#"><%= t(:education, scope: :'myinfo.menu') -%></a></li>
+          </ul>
+        </li>
+        <li><a href="#"><%= t(:reports, scope: :'myinfo.menu') -%></a></li>
+        <%- if current_user && current_user.role_access?(User.manager_role) %>
+          <li class="<%= active_tab('admin') %>"><%= link_to t(:admin, scope: :'myinfo.menu'), admin_path %></li>
+        <%- end %>
+      <%- end %>
+    </ul>
+    <ul class="nav pull-right">
+      <li class="<%= active_tab('help') %>"><%= link_to t(:help, scope: :'myinfo.menu'), help_path %></li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<h5>Current Environment (live)</h5>
+
+<table class="table">
+<tr><td>
+<%= "Rails #{Rails.version} (#{Rails.env})" -%><br />
+<%= "Ruby #{RUBY_VERSION}" -%><br />
+<br />
+
+<% others, cnt = "", 0 -%>
+<%  bundled_gems.sort{|a,b|a.name<=>b.name}.each do |spec| -%>
+  <% if spec.name =~ /devise|twitter|facebox|simple_form|best_in_place/ -%>
+    <%= "#{spec.name} #{spec.version}<br />".html_safe -%>
+  <% else -%>
+    <% cnt += 1 -%>
+    <% others += "#{spec.name} #{spec.version}<br />" -%>
+    <% others += "</td><td>" if (cnt % 18) == 0 -%>
+  <% end -%>
+<% end -%>
+<br /><br />
+</td><td>
+<%= others.html_safe -%>
+</td></tr></table>
+

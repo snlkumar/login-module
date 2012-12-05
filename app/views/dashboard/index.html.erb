@@ -1,0 +1,65 @@
+<h3>Welcome!</h3>
+<p>This is an example website built using Rails <%= Rails.version -%> and Ruby <%= RUBY_VERSION -%> (hosted on <a href="http://www.webfaction.com/" target="_blank">Webfaction</a>)</p>
+<p>Please create a sign-in and have a look around. Not very exciting, is it? That's okay, that's not the point. The idea is to create an example Rails project that uses the latest Rails and Ruby versions along with devise, twitter-bootstrap and other popular gems (details and versions listed below). The interesting bits are what's behind the curtain.</p> 
+
+<br /><br />
+
+<div class="tabbable">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#hello-world" data-toggle="tab">Hello World</a></li>
+    <li><a href="#gems" data-toggle="tab">Gem Versions</a></li>
+    <li><a href="#github" data-toggle="tab">Github</a></li>
+    <li><a href="#issues" data-toggle="tab">Issues & Comments</a></li>
+    <li><a href="#next" data-toggle="tab">Next Steps</a></li>
+  </ul>
+  
+  <div class="tab-content">
+    <div class="tab-pane active" id="hello-world">
+      <p>What is this website and why does it exist?</p>
+      <ul>
+        <li>I'm getting back to Rails after working with other technologies for a couple years. Decided to build a website since, like most coders, I learn best by getting to work.</li>
+        <li>All of my work on this project, including the full source for the website, will eventually be up on Github. Since this is my own work for my own education, it's not under any non-disclosure agreements so I can share freely.</li>
+        <li>I've noticed there are only a few examples out there that show the full integration of various gems to demonstrate how they work together, and sometime clash (see known issues).</li>
+        <li>This allows me to give back and contribute to the open source development community with a hearty thank you to all of you that take the time to create tutorials and answer questions on Stack Overflow.</li>
+      </ul>
+      <br /><br />
+      Btw, if you're wonder who I am? <a href="http://www.linkedin.com/in/jehughes" target="_blank">http://www.linkedin.com/in/jehughes</a>
+    </div>
+
+    <div class="tab-pane" id="gems">
+      <%= render :partial => 'dashboard/partials/version' -%>
+    </div>
+  
+    <div class="tab-pane" id="github">
+      <p>This will eventually make it to github.</p>
+    </div>
+  
+    <div class="tab-pane" id="issues">
+       <p class="bold">Known Issues and To-Do List</p>
+      <ul>
+        <li>The facebox class .close is clashing with another .close class definition, probably bootstrap? Creates a problem with the close option on alert messages displayed inside a facebox modal. Currently, the option has been removed but this needs to be sorted and restored.</li>
+        <li>There is a potential memory leak with bootstrap when working in the Rails development environment. I can't reproduce it at will but it happened twice when I was editing bootstrap assets and doing iterative testing by just refreshing the browser and not restarting the app each time.</li>
+        <li>Action mailer settings are duplicated in development.rb and environment.rb - find somewhere to set them only once.</li>
+      </ul>
+      <p class="bold">Comments</p>
+      <ul>
+        <li>Since I didn't use all of the devise features, you'll want to compare the devise controllers and local copies for what's missing.</li>
+        <li>Assumes user has Javascript and cookies enabled.</li>
+         <br />
+        <li>Dec 3, 2012 - only tested in latest version of Chrome and Firefox.</li>
+      </ul>
+    </div>
+  
+    <div class="tab-pane" id="next">
+      <p>Potential next steps:</p>
+      <ul>
+      <li>The current tests are minimal and not behaviour driven. Need to implement a framework for creating real integration testing of the user experience. Some combination of Rspec, Caybara and Selenium?</li>
+      <li>Need to make better usage of bootstrap's fluid container. Also, need to limit boostrap includes to what's actually used.</li>
+      <li>Continue adding features for my re-education.</li>
+      </ul>
+    </div>
+  
+  </div>
+</div>
+
+
