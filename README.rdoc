@@ -10,11 +10,11 @@ What is this project and why does it exist?
 
 - This allows me to pay-it-forward and contribute to the open source development community with a hearty thanks to all of you that take the time to create tutorials, push to Github and answer questions on Stack Overflow.
 
-A live version of this project is running at http://registermy.info (coming soon)
+A live version of this project is running at http://registermy.info
 
-Btw, if you're wonder who I am? http://www.linkedin.com/in/jehughes
+====Features
 
-====Installation Notes
+====Installation
 
 You'll notice in the .gitignore that the database.yml file is not included. You'll also need to create a file config/private.yml to define some of the mailer variables specific to your set-up. The file's format is:
 
@@ -37,6 +37,7 @@ You'll notice in the .gitignore that the database.yml file is not included. You'
     <<: *defaults
     url_host: 'your production website host'
 
+====Tests
 
 ====Known Issues
 
@@ -52,7 +53,7 @@ Things that still need taking care of:
 
 - The current tests are minimal and not behaviour driven. Need to implement a framework for creating real integration testing of the user experience. Some combination of Rspec, Caybara and Selenium?
 
-- (as of Dec 5, 2012) Only tested in latest version of Chrome and Firefox.
+- Only tested in latest version of Chrome and Firefox.
 
 ====Comments
 
@@ -61,4 +62,22 @@ Please note:
 - Since I didn't use all of the devise features, you'll want to compare the devise controllers and local copies for what's missing.
  
 - Assumes user has Javascript and cookies enabled.
-  
+
+====Author
+
+Joan Hughes (ZoeOberon Solutions)
+
+http://www.linkedin.com/in/jehughes
+
+Need an off-site freelance Rails coder?
+
+====License
+The MIT License (MIT)
+
+Copyright (c) 2012 Joan Hughes (ZoeOberon Solutions)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
