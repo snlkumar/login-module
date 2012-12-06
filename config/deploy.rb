@@ -21,6 +21,10 @@ after "deploy:copy_ignored_files", "deploy:restart_passenger"
 
 namespace :deploy do
   task :copy_ignored_files do
+    
+    # since config/private.yml and config/database.yml are in .gitignore
+    # create the directory #{deploy_to}/shared/local_config and populate with your own YML files
+    
     run "cp #{deploy_to}/shared/local_config/*.yml #{deploy_to}/current/config"
   end
   task :restart_passenger do
