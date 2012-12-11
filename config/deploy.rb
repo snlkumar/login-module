@@ -25,7 +25,11 @@ namespace :deploy do
     # since config/private.yml and config/database.yml are in .gitignore
     # create the directory #{deploy_to}/shared/local_config and populate with your own YML files
     
-    run "cp #{deploy_to}/shared/local_config/*.yml #{deploy_to}/current/config"
+    begin
+      run "cp #{deploy_to}/shared/local_config/*.yml #{deploy_to}/current/config"
+    rescue Exception
+      puts "\nCOPY OF SHARED database.yml AND/OR private.yml FAILED - CHECK THEY EXIST\n\n"
+    end
   end
   task :restart_passenger do
     run "touch #{deploy_to}/current/tmp/restart.txt"
