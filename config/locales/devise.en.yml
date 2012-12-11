@@ -21,6 +21,8 @@ en:
       invalid_token: 'Invalid authentication token.'
       timeout: 'Your session expired, please sign in again to continue.'
       inactive: 'Your account was not activated yet.'
+      unable_send_password_email: 'Unable to send email for changing password'
+      unable_to_find_users_email: 'No email address found for username'
     sessions:
       signed_in: 'Signed in successfully.'
       signed_out: 'Signed out successfully.'
