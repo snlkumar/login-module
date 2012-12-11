@@ -1,14 +1,12 @@
 ==Welcome!
 
-This is an example website built using (as of Dec 5, 2012) Rails 3.2.3 and Ruby 1.9.3
+An example website built using Rails 3.2.3 and Ruby 1.9.3 with among others the devise, twitter-bootstrap and facebox gems.
 
-What is this project and why does it exist?
+Since this is my own work for my own education, it's not under any non-disclosure agreements so I can share freely and don't need to be vague or hide specifics.
 
-- I'm getting back to Rails after working with other technologies for a couple years. Decided to build a website from scratch since, like most coders, I learn best by getting to work.
+There are already several starter/example Rails 3 projects out there but perhaps I've put some pieces together that will save someone else some time. 
 
-- There are already several starter/example Rails 3 projects out there but perhaps I've put some pieces together that will save someone else some time. Since this is my own work for my own education, it's not under any non-disclosure agreements so I can share freely and don't need to be vague or hide specifics.
-
-- This allows me to pay-it-forward and contribute to the open source development community with a hearty thanks to all of you that take the time to create tutorials, push to Github and answer questions on Stack Overflow.
+This allows me to pay-it-forward and contribute to the open source development community with a hearty thanks to all of you that take the time to create tutorials, push to Github and answer questions on Stack Overflow.
 
 A live version of this project is running at http://registermy.info
 
@@ -16,26 +14,11 @@ A live version of this project is running at http://registermy.info
 
 ====Installation
 
-You'll notice in the .gitignore that the database.yml file is not included. You'll also need to create a file config/private.yml to define some of the mailer variables specific to your set-up. The file's format is:
+Included in the project repo are placeholder <tt>config/database.yml</tt> and <tt>config/private.yml</tt> files. For the project to run, you'll need to update these files with your own local settings.
 
- # Place private site-specific info here
- defaults: &defaults
-    url_host: 'your development website host'
-    mailer_address: 'your mailer address' #e.g., smtpout.secureserver.net for godaddy.com
-    mailer_port: 80
-    mailer_domain: 'your mailer domain'
-    mailer_user_name: 'your mailer user name'
-    mailer_password: 'your mailer password'
+These two files are listed in <tt>.gitignore</tt> so your local changes will not be overwritten with subsequent updates. The file <tt>config/private.yml.todo</tt> contains any additions or changes to <tt>config/private.yml</tt> that will need to be updated locally.
 
- development:
-    <<: *defaults
-
- test:
-    <<: *defaults
-
- production:
-    <<: *defaults
-    url_host: 'your production website host'
+Please read the comments in <tt>config/deploy.rb</tt> for how these two locally maintained files are treated with a Capistrano deployment.
 
 ====Tests
 
@@ -47,19 +30,23 @@ Things that still need taking care of:
  
 - There is a potential memory leak with bootstrap when working in the Rails development environment. I can't reproduce it at will but it happened twice when I was editing bootstrap assets and doing iterative testing by just refreshing the browser and not restarting the app each time.
  
+- Background flicker with some of the facebox modal window opens (inconsistent).
+
 - Action mailer settings are duplicated in development.rb and environment.rb - find somewhere to set them only once.
 
-- Need to make better usage of bootstrap's fluid container. Also, need to limit boostrap includes to what's actually used.
+- Need to make better usage of bootstrap's fluid container. Also, need to limit bootstrap includes to what's actually used.
 
 - The current tests are minimal and not behaviour driven. Need to implement a framework for creating real integration testing of the user experience. Some combination of Rspec, Caybara and Selenium?
 
 - Only tested in latest version of Chrome and Firefox.
 
+- Need a lot more documentation and tutorials.
+
 ====Comments
 
 Please note:
 
-- Since I didn't use all of the devise features, you'll want to compare the devise controllers and local copies for what's missing.
+- Since I didn't use all of the devise features, you'll want to compare the original devise and the overriding inherited controllers for what's missing.
  
 - Assumes user has Javascript and cookies enabled.
 
