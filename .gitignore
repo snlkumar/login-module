@@ -10,6 +10,8 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+/doc
+/public/doc
 
 # Ignore files with personal data
 /config/private.yml
