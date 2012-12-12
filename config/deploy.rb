@@ -1,7 +1,7 @@
 require 'bundler/capistrano'
 
 set :application, "registermyinfo"
-set :repository,  "https://github.com/zoeoberon/myinfo-rails3-example.git"
+set :repository,  "https://github.com/jehughes/rails3-devise-bootstrap-example.git"
 
 set :scm, :git 
 
@@ -12,7 +12,7 @@ role :app, "web335.webfaction.com"  # This may be the same as your `Web` server
 role :db,  "web335.webfaction.com", :primary => true # This is where Rails migrations will run
 
 set :user, "jehughes"
-set :scm_username, "zoeoberon"
+set :scm_username, "jehughes"
 set :use_sudo, false
 default_run_options[:pty] = true
 
