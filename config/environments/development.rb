@@ -49,4 +49,7 @@ Myinfo::Application.configure do
     :enable_starttls_auto => true
   }
 
+  # Google Analytics using the google-analytics-rails gem
+  GA.tracker = PRIVATE_DATA['ga_tracker']
+  
 end
