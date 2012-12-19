@@ -1,12 +1,18 @@
 ==Welcome!
 
-An example website built using Rails 3.2.3 and Ruby 1.9.3 with among others the devise, twitter-bootstrap and facebox gems. There are already several example/starter Rails 3 projects out there but perhaps I've put some pieces together that will save someone else some time. This allows me to pay-it-forward and contribute to the open source development community with a hearty thanks to all of you that take the time to create tutorials, push to Github and answer questions on Stack Overflow.
+An example website built using Rails 3.2.3 and Ruby 1.9.3 with among others the devise, twitter-bootstrap and facebox gems.
+
+Since this is my own work for my own education, it's not under any non-disclosure agreements so I can share freely and don't need to be vague or hide specifics.
+
+There are already several example/starter Rails 3 projects out there but perhaps I've put some pieces together that will save someone else some time. 
+
+This allows me to pay-it-forward and contribute to the open source development community with a hearty thanks to all of you that take the time to create tutorials, push to Github and answer questions on Stack Overflow.
 
 A live version of this project is running at http://registermy.info
 
 ===Features
 
-(to be documented)
+(list special features)
 
 ===Installation
 
@@ -17,8 +23,6 @@ These two files are listed in <tt>.gitignore</tt> so your local changes will not
 Please read the comments in <tt>config/deploy.rb</tt> for how these two locally maintained files are treated with a Capistrano deployment.
 
 ===Tests
-
-(to be documented)
 
 ===Known Issues
 
@@ -51,12 +55,7 @@ http://www.linkedin.com/in/jehughes
 
 Looking for an off-site freelance Rails coder?
 
-{Tracker Bug: Dear github - please add back the Traffic graph!}[http://registermy.info/assets/tracker_bug.jpg]
-
 ===License
-
-Since this is my own work for my own education, it's not under any non-disclosure agreements so I can share freely and don't need to be vague or hide specifics.
-
 The MIT License (MIT)
 
 Copyright (c) 2012 Joan Hughes (ZoeOberon Solutions)
