@@ -22,7 +22,7 @@ group :assets do
 end
 
 gem "less-rails"
-gem 'twitter-bootstrap-rails', '2.1.6'
+gem 'twitter-bootstrap-rails'
 
 gem 'jquery-rails'
 
@@ -36,7 +36,7 @@ gem 'jquery-rails'
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
