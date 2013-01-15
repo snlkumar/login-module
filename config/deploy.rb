@@ -19,8 +19,10 @@ set :keep_releases, 3
 before "deploy:finalize_update", "deploy:assets:symlink"
 after  "deploy:update_code", "deploy:assets:precompile"
 
-after  "deploy", "deploy:copy_ignored_files"
-after  "deploy:copy_ignored_files", "deploy:restart_passenger"
+after  "deploy", "deploy:migrate"
+before "deploy:migrate", "deploy:copy_git_ignored_files"
+
+after  "deploy:migrate", "deploy:restart_passenger"
 before "deploy:restart_passenger", "deploy:cleanup"
 
 namespace :deploy do
@@ -49,7 +51,7 @@ namespace :deploy do
     end
   end
   
-  task :copy_ignored_files do
+  task :copy_git_ignored_files do
     
     # since config/private.yml and config/database.yml are in .gitignore
     # create the directory #{shared_path}/local_config and populate with your own YML files
