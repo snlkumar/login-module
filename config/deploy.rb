@@ -1,6 +1,6 @@
 require 'bundler/capistrano'
 
-set :application, "registermyinfo"
+set :application, "r3devboot"
 set :repository,  "https://github.com/jehughes/rails3-devise-bootstrap-example.git"
 set :deploy_to, "/home/jehughes/webapps/#{application}"
 
@@ -30,7 +30,7 @@ namespace :deploy do
   # http://www.rostamizadeh.net/blog/2012/04/14/precompiling-assets-locally-for-capistrano-deployment/
   namespace :assets do
     task :precompile, :roles => :web do
-      from = source.next_revision(current_revision)
+#      from = source.next_revision(current_revision)
       #if capture("cd #{latest_release} && #{source.local.log(from)} vendor/assets/ lib/assets/ app/assets/ | wc -l").to_i > 0
         run_locally("rake assets:clean && rake assets:precompile")
         run_locally "cd public && tar -jcf assets.tar.bz2 assets"
