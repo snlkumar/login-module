@@ -1,6 +1,6 @@
 ==rails3-devise-bootstrap-example
 
-Example Rails 3.2 & Ruby 1.9.3 application using the devise and twitter-bootstrap gems. Facebox is used for modal 'lightbox' devise forms.
+Example Rails 3.2 / Ruby 1.9.3 site using devise and twitter-bootstrap. Facebox is used for modal 'lightbox' devise forms.
 
 A live version of this project is running at http://r3-dev-boot.gitrepoexamples.com
 
@@ -16,7 +16,7 @@ The <tt>config/private.yml</tt> file contains the individual information not app
 
 These two files are listed in <tt>.gitignore</tt> so your local changes will not be overwritten with subsequent updates. The file <tt>config/private.yml.todo</tt> contains any modifications to <tt>config/private.yml</tt> that will need to be updated locally.
 
-Lastly, update what's necessary for your hosting. Possibly actions such as creating the ./tmp and ./log directories, editing the ngnix conf, etc.
+Lastly, update what's necessary for your hosting. Such as creating the ./tmp and ./log directories, editing the ngnix conf, etc.
 
 ==== Capistrano 
 
