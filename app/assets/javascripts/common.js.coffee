@@ -5,11 +5,11 @@ jQuery ->
 
 # ajax spinners
 
-$("*[data-spinner]").live "ajax:beforeSend", (e) ->
+$(document).on "ajax:beforeSend", "*[data-spinner]", (e) ->
   $($(this).data("spinner")).show()
   e.stopPropagation() #Don't show spinner of parent elements.
 
-$("*[data-spinner]").live "ajax:complete", ->
+$(document).on "ajax:complete", "*[data-spinner]", ->
   $($(this).data("spinner")).hide()
 
 # facebox - make modal
