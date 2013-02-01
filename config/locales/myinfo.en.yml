@@ -26,8 +26,7 @@ en:
       admin: "Admin"
       help: "Help"
       login: "Login"
-      logout: "logout"
-      edit_login: "edit login"
+      logout: "Logout"
       sign_up: "Sign Up"  
     titles:
       manage_registered_users: "Manage Registered Users"
@@ -38,9 +37,6 @@ en:
       delete_account: "Delete my account"
     messages:
       need_javascript_and_cookies: "Javascript and cookies are required to use this site."      
-      disclaimer_message: "This is a test site. There is NO guarantee any information you enter is maintained, private or secure. "
-      hello: "Hello"
-      already_registered: "Already signed-up?"
       warning_deletes_user: "Warning: Permanently deletes user."
       confirm: "Are you sure?"
       click_to_edit_inline: "Click on individual user information fields to edit."

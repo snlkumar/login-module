@@ -4,19 +4,16 @@ module DashboardHelper
   def bundled_gems
     Bundler.load.specs
   end
-  
-  def convert_list_to_ul_block(rdocname)
-    # needed to share lists between dashboard and github README
-    # convert simple '-' rdoc list to a <ul> block
-    filename = Rails.root.join('doc', rdocname)
-    if File.exist?(filename) and File.file?(filename)
-      html = "<ul>"
-      File.read(filename).each_line do |item|
-        html += (item.gsub(/^-/,'<li>') + '</li><br />') if item =~ /^-/
-      end
-      return html + "</ul>"
+
+  def all_gems
+    cnt = 0
+    others = "<table class='table'><tr><td>"
+    bundled_gems.sort{|a,b|a.name<=>b.name}.each do |spec|
+      cnt += 1
+      others += "#{spec.name} #{spec.version}<br />"
+      others += "</td><td>" if (cnt % 18) == 0
     end
-    ""
+    others +  "</td></tr></table>"
   end
 
 end

@@ -10,7 +10,7 @@
 }
 /* NOTE: changed default close image by putting custom image 
          in assets/facebox/closelabel.png 
-         - need to look into why setting closeImage didn't work? */
+   TODO: need to look into why setting closeImage didn't work? */
 
 /* conflict with another close class, probably bootsrap */
 #facebox .close img {

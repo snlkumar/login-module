@@ -10,8 +10,7 @@
  *
  *= require jquery.facebox
  *= require facebox_custom
- *= require cssstickyfooter
- *= require myinfo
  *= require bootstrap_and_overrides
+ *= require myinfo
  *= require_self
 */

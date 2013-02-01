@@ -1,39 +1,26 @@
-<h3>Welcome!</h3>
-<p>This is an example website built using Rails <%= Rails.version -%> and Ruby <%= RUBY_VERSION -%> (hosted on <a href="http://www.webfaction.com/" target="_blank">Webfaction</a>)</p>
-<p>Please create a sign-in and have a look around. Not very exciting, is it? That's okay, that's not the point. The idea is to create an example Rails project that uses the latest Rails and Ruby versions along with devise, twitter-bootstrap and other popular gems (details and versions listed below). The interesting bits are what's behind the curtain.</p> 
+<% title "Dashboard:" %>
 
-<br /><br />
-
-<div class="tabbable">
-  <ul class="nav nav-tabs">
-    <li class="active"><a href="#github" data-toggle="tab">Github</a></li>
-    <li><a href="#gems" data-toggle="tab">Gem Versions</a></li>
-    <li><a href="#issues" data-toggle="tab">Issues & ToDo</a></li>
-    <li><a href="#comments" data-toggle="tab">Comments</a></li>
-  </ul>
-  
-  <div class="tab-content">
-    <div class="tab-pane active" id="github">
-      <p>The source code and README can be found on github.com:</p>
-      <p><a href="https://github.com/jehughes/rails3-devise-bootstrap-example.git">https://github.com/jehughes/rails3-devise-bootstrap-example.git</a></p>
-      <p>Who am I? <a href="http://www.linkedin.com/in/jehughes" target="_blank">http://www.linkedin.com/in/jehughes</a></p>
-    </div>
-  
-    <div class="tab-pane" id="gems">
-      <%= render :partial => 'dashboard/partials/version' -%>
-    </div>
-  
-    <div class="tab-pane" id="issues">
-      <p class="bold">Known Issues and To-Do List</p>
-        <%= convert_list_to_ul_block('open_issues.rdoc').html_safe -%>
-    </div>
-
-    <div class="tab-pane" id="comments">
-      <p class="bold">Comments</p>
-        <%= convert_list_to_ul_block('comments.rdoc').html_safe -%>
-    </div>
-   
-  </div>
-</div>
-
-
+        <div class="row">
+          <h1>Rails 3.2 / Devise / Twitter Bootstrap Demonstration Site <%= "<span style='color:red;font-size: 9px;'>(alpha)</span>".html_safe if Rails.env == 'development' -%></h1>
+          <p>
+          Please sign-up and have a look around. Or try "jane", "123123".<br />
+          The source code for this site can be found on github.com: <a class="btn btn-small" href="https://github.com/jehughes/rails3-devise-bootstrap-example" target="_blank">Github Repo</a>
+          </p>
+          <br />
+        </div>
+        <div class="row">
+          <h5>Gem versions:</h5>
+        </div>
+        <%= render :partial => 'dashboard/partials/version' -%>
+        <div class="row">
+          <br />
+          <h5>Caveats:</h5>
+        </div>
+        <div class="row">
+          <ul>
+            <li>There is a potential memory leak with bootstrap when working in the Rails development environment. The memory usage creeps up when I am editing bootstrap assets and doing iterative testing by just refreshing the browser and not restarting the app each time.</li>
+            <li>Since I didn't use all of the devise features, you'll want to compare the original devise controllers and the overriding inherited controllers for what's missing.</li>
+            <li>Only tested in latest version of Chrome and Firefox.</li>
+            <li>Assumes user has Javascript and cookies enabled.</li>
+          </ul>
+        </div>

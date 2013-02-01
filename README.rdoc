@@ -22,11 +22,11 @@ Lastly, update what's necessary for your hosting. Such as creating the ./tmp and
 
 Please read the comments in <tt>config/deploy.rb</tt> for how these two locally maintained files are treated with a Capistrano deployment.
 
-==Comments
+==Caveats:
 
 Please note:
 
-- There is a potential memory leak with bootstrap when working in the Rails development environment. I can't reproduce it at will but it happened twice when I was editing bootstrap assets and doing iterative testing by just refreshing the browser and not restarting the app each time.
+- There is a potential memory leak with bootstrap when working in the Rails development environment. The memory usage creeps up when I am editing bootstrap assets and doing iterative testing by just refreshing the browser and not restarting the app each time.
 - Since I didn't use all of the devise features, you'll want to compare the original devise controllers and the overriding inherited controllers for what's missing.
 - Assumes user has Javascript and cookies enabled.
 - Only tested in latest version of Chrome and Firefox.

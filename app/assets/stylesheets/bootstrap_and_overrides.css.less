@@ -14,10 +14,7 @@
 // -------------------------------------------------------------------
 
 // --- > COLORS
-@bodyBackground: #f7faf5;
 @textColor: #000000;
-@btnBackground: #E5E5E5;
-@inputBorder: @grayLight;
 
 // --- > FIXES
 
@@ -47,42 +44,29 @@
   white-space: nowrap;
 }
 
-// --- > LAYOUT
-
-@appColumns: 10;
-@appPageWidth: (@gridColumnWidth1200 * @appColumns) + (@gridGutterWidth1200 * (@appColumns - 1));
-
-// need to review grid usage for more bootstrap-ish way to center page?
-.centerPage{
-  background-color:white;
-  position:relative;
-  width: @appPageWidth;
-  height:100%;
-  margin:0 auto;
-  padding:0;
-}
-
-// --- > NAV BAR, TABS
+// --- > NAV BAR
 
 @navbarLinkBackgroundActive: #FFFFFF;
 @navbarLinkColorActive: #000000;
 @navbarLinkColor: @white;
-@navbarBackgroundHighlight: #426E25;
-@navbarBackground: #426E25;
-@navbarLinkColorHover: #cee7f3;
-@dropdownLinkBackgroundHover: #547c3a;
-@dropdownBorder: @grayLight;
+@navbarBackgroundHighlight: #329fd6;
+@navbarBackground: #329fd6;
+@navbarLinkColorHover: @white;
+@dropdownLinkBackgroundHover: #329fd6;
 @navbarText: @white;
 
-.navbar-inner {
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-}
-.navbar {
-  margin:0px;
+.navbar .nav > li > a {
+  text-shadow: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-.nav-tabs {
-  font-weight: bold;
+.navbar-text > a {
+//  font-size: 85%;
+  color: @navbarText;
+  &:hover {
+    color: @navbarText;
+    text-decoration: underline;
+  }
 }
