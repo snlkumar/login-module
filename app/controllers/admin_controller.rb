@@ -6,7 +6,7 @@ class AdminController < ApplicationController
   end
   
   def index
-    @users = User.order("username")
+    @users = User.order("role,username")
   end
   
   def add_new_user
