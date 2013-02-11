@@ -1,28 +1,29 @@
-==rails3-devise-bootstrap-example
+#rails3-devise-bootstrap-example
 
 Example Rails 3.2 / Ruby 1.9.3 site using devise and twitter-bootstrap. Facebox is used for modal 'lightbox' devise forms.
 
-A live version of this project is running at http://r3-dev-boot.gitrepoexamples.com
+A live version of this project is running at <http://r3-dev-boot.gitrepoexamples.com>
 
-==Installation
+##Installation
 
 First, download the zip file or clone this repository, then:
-  bundle install
-  rake db:migrate
 
-Next, edit the <tt>config/database.yml</tt> and <tt>config/private.yml</tt> files.
+    bundle install
+    rake db:migrate
 
-The <tt>config/private.yml</tt> file contains the individual information not appropriate for saving in a public repository.
+Next, edit the `config/database.yml` and `config/private.yml` files.
 
-These two files are listed in <tt>.gitignore</tt> so your local changes will not be overwritten with subsequent updates. The file <tt>config/private.yml.todo</tt> contains any modifications to <tt>config/private.yml</tt> that will need to be updated locally.
+The `config/private.yml` file contains the individual information not appropriate for saving in a public repository.
 
-Lastly, update what's necessary for your hosting. Such as creating the ./tmp and ./log directories, editing the ngnix conf, etc.
+These two files are listed in `.gitignore` so your local changes will not be overwritten with subsequent updates. The file `config/private.yml.todo` contains any modifications to `config/private.yml` that will need to be updated locally.
 
-==== Capistrano 
+Lastly, update what's necessary for your hosting. Such as creating the `./tmp` and `./log` directories, editing the ngnix conf, etc.
 
-Please read the comments in <tt>config/deploy.rb</tt> for how these two locally maintained files are treated with a Capistrano deployment.
+###Capistrano
 
-==Caveats:
+Please read the comments in `config/deploy.rb` for how these two locally maintained files are treated with a Capistrano deployment.
+
+##Caveats:
 
 Please note:
 
@@ -32,15 +33,16 @@ Please note:
 - Only tested in latest version of Chrome and Firefox.
 
 
-==Author
+##Author
 
 Joan Hughes
+
 http://www.linkedin.com/in/jehughes
 
-==License
+##License
 The MIT License (MIT)
 
-Copyright (c) 2012 Joan Hughes (ZoeOberon Solutions)
+Copyright (c) 2013 Joan Hughes (ZoeOberon Solutions)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
