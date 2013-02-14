@@ -21,7 +21,7 @@ class AdminController < ApplicationController
     else
       @error_message ||= t(:cannot_save_new_user, :scope => 'myinfo.errors.messages')
     end
-    @users = User.order("username")
+    @users = User.order("role,username")
     respond_to do |format|
       format.html { redirect_to admin_path }
       format.js { render :layout=>false }
@@ -40,7 +40,7 @@ class AdminController < ApplicationController
   def delete_user   
     @user = User.find(params[:id])
     @user.destroy if current_user.is_admin?
-    @users = User.order("username")
+    @users = User.order("role,username")
     respond_to do |format|
       format.html { redirect_to admin_path }
       format.js { render :layout=>false }
