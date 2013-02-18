@@ -33,10 +33,11 @@ GEM
     best_in_place (2.0.3)
       jquery-rails
       rails (~> 3.1)
-    better_errors (0.5.0)
+    better_errors (0.6.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
-    binding_of_caller (0.6.8)
+    binding_of_caller (0.7.1)
+      debug_inspector (>= 0.0.1)
     builder (3.0.4)
     capistrano (2.14.2)
       highline
@@ -60,6 +61,7 @@ GEM
       sass (~> 3.1)
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
+    debug_inspector (0.0.2)
     devise (2.2.3)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -92,7 +94,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.21)
-    multi_json (1.6.0)
+    multi_json (1.6.1)
     mysql2 (0.3.11)
     net-scp (1.1.0)
       net-ssh (>= 2.6.5)
@@ -150,7 +152,7 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
-    twitter-bootstrap-rails (2.2.3)
+    twitter-bootstrap-rails (2.2.4)
       actionpack (>= 3.1)
       execjs
       railties (>= 3.1)
