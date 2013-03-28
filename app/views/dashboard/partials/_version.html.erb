@@ -10,7 +10,7 @@
             <%= "#{g.name} #{g.version}<br />".html_safe %>
           </div>
           <div class="span3"> 
-            <% g = bundled_gems.find{|s| s.name =~ /twitter/} -%>
+            <% g = bundled_gems.find{|s| s.name =~ /bootstrap/} -%>
             <%= "#{g.name} #{g.version}<br />".html_safe %>
             <button type="button" class="btn btn-small" data-toggle="collapse" data-target="#list_gems">Show / Hide All Gems</button>
           </div>

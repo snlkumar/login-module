@@ -5,9 +5,10 @@ class LocalDevise::RegistrationsController < Devise::RegistrationsController
   def create
     build_resource
     resource.role = User.user_role
- 
+    
     if resource.save
       sign_in(resource_name, resource)
+      log_sign_in
       set_msg t(:signed_up, :scope => 'devise.registrations')
     else
       clean_up_passwords resource
@@ -32,5 +33,5 @@ class LocalDevise::RegistrationsController < Devise::RegistrationsController
         format.js { render :action => "failed_edit" }
       end
     end
-  end  
+  end 
 end

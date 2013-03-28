@@ -2,22 +2,34 @@
 
 Example Rails 3.2 / Ruby 1.9.3 site using devise and twitter-bootstrap. Facebox is used for modal 'lightbox' devise forms.
 
-A live version of this project is running at <http://r3-dev-boot.gitrepoexamples.com>
+Demo site: <http://r3-dev-boot.gitrepoexamples.com>
+
+###Recent Updates
+
+March 2013:
+
+- Added login via Twitter option using the omniauth-twitter gem.
+- Added user image to top nav bar. If no image from Twitter, then look for one on Gravatar
+- Email is no longer required.
 
 ##Installation
 
-First, download the zip file or clone this repository, then:
+1. Download the zip file or clone this repository, then run:
 
-    bundle install
-    rake db:migrate
+  ```
+  bundle install
+  rake db:migrate
+  ```
 
-Next, edit the `config/database.yml` and `config/private.yml` files.
+2. Register your application with Twitter. 
 
-The `config/private.yml` file contains the individual information not appropriate for saving in a public repository.
+3. Edit the `config/database.yml` and `config/private.yml` files.
 
-These two files are listed in `.gitignore` so your local changes will not be overwritten with subsequent updates. The file `config/private.yml.todo` contains any modifications to `config/private.yml` that will need to be updated locally.
+  The `config/private.yml` file contains the individual information not appropriate for saving in a public repository.
 
-Lastly, update what's necessary for your hosting. Such as creating the `./tmp` and `./log` directories, editing the ngnix conf, etc.
+  These two files are listed in `.gitignore` so your local changes will not be overwritten with subsequent updates. The file `config/private.yml.todo` contains any modifications to `config/private.yml` that will need to be updated locally.
+
+4. Update what's necessary for your hosting. Such as creating the `./tmp` and `./log` directories, editing the ngnix conf, etc.
 
 ###Capistrano
 

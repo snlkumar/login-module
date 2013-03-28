@@ -27,7 +27,7 @@ en:
       help: "Help"
       login: "Login"
       logout: "Logout"
-      sign_up: "Sign Up"  
+      sign_up: "Sign Up"
     titles:
       manage_registered_users: "Manage Registered Users"
       add_new_user: "Add new user:"
@@ -53,6 +53,7 @@ en:
 #
     devise:
       failure:
+        unable_to_find_email: "Unable to find an email address for this user. Did you sign in with Twitter?"
         unable_send_password_email: "Unable to send password change email. Please try again later."
       messages:
         default_new_session: "To sign in, use the Login link at the top right."
@@ -63,8 +64,10 @@ en:
         reset_password: "Reset password"
         reset_password_message: "An email with instuctions on how to reset your password will be sent to the email address on file."
         delete_message: "Unhappy? CAUTION: This is permanent."
+        provider_unchanged: "Any changes you save here will not affect your %{provider} account."
+        provider_not_deleted: "This will not delete your %{provider} account."
       buttons:
         change_password: "Change password"
         send_instructions: "Send me instructions"
-        delete_user_link_title: "Delete user \"%{username}\" with email \"%{email}\""
+        delete_user_link_title: "Delete user \"%{username}\""
         

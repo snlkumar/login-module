@@ -12,15 +12,3 @@
           <h5>Gem versions:</h5>
         </div>
         <%= render :partial => 'dashboard/partials/version' -%>
-        <div class="row">
-          <br />
-          <h5>Caveats:</h5>
-        </div>
-        <div class="row">
-          <ul>
-            <li>There is a potential memory leak with bootstrap when working in the Rails development environment. The memory usage creeps up when I am editing bootstrap assets and doing iterative testing by just refreshing the browser and not restarting the app each time.</li>
-            <li>Since I didn't use all of the devise features, you'll want to compare the original devise controllers and the overriding inherited controllers for what's missing.</li>
-            <li>Only tested in latest version of Chrome and Firefox.</li>
-            <li>Assumes user has Javascript and cookies enabled.</li>
-          </ul>
-        </div>

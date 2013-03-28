@@ -10,9 +10,10 @@
       
       <%= f.input :username, :input_html => { :autocomplete => :off} %>
       <%= f.input :email, :input_html => { :autocomplete => :off} %>
-      <%= f.input :password %>
-      <%= f.input :password_confirmation %>
-    
+      <% if f.object.password_required?-%>
+        <%= f.input :password %>
+        <%= f.input :password_confirmation %>
+      <% end -%>
      <div class="control-group">
         <div class="controls">
           <%= f.submit t(:sign_up, scope: :'myinfo.menu'), :class => "btn" %>&nbsp;<%= spinner_tag 'new_user_spinner' %>

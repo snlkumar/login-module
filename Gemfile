@@ -51,3 +51,5 @@ gem 'simple_form'
 gem 'best_in_place'
 gem 'facebox-rails'
 gem 'google-analytics-rails'
+gem 'omniauth-twitter'
+

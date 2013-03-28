@@ -59,7 +59,10 @@ Myinfo::Application.routes.draw do
 
   root :to => 'dashboard#index'
   
-  devise_for :users, :controllers => { :sessions => 'local_devise/sessions', :registrations => 'local_devise/registrations', :passwords => 'local_devise/passwords'}
+  devise_for :users, :controllers => { :sessions => 'local_devise/sessions', 
+                                       :registrations => 'local_devise/registrations', 
+                                       :passwords => 'local_devise/passwords', 
+                                       :omniauth_callbacks => 'local_devise/omniauth_callbacks'}
   devise_scope :users do
     get '/users', :to => 'dashboard#index', :as => :user_root
   end  
@@ -77,5 +80,4 @@ Myinfo::Application.routes.draw do
   match '/facebox/fb_login' => 'facebox#fb_login', :as => :fb_login  
   match '/facebox/fb_reset_password' => 'facebox#fb_reset_password', :as => :fb_reset_password  
 
-  #get 'rails/info/properties' => 'dashboard#index'
 end

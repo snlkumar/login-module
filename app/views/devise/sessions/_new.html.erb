@@ -12,7 +12,7 @@
     <%= link_to t(:forgot_password, scope: :'myinfo.buttons'), fb_reset_password_path, :remote => true, :class => 'form_align_with_input' %>
     <div class="control-group">
       <div class="controls">
-        <input type="checkbox"> <%= t(:remember_me, scope: :'myinfo.buttons') -%><br /><br />
+        <input type="checkbox" checked> <%= t(:remember_me, scope: :'myinfo.buttons') -%><br /><br />
         <%= f.submit t(:login, scope: :'myinfo.menu'), :class => "btn"%>&nbsp;<%= spinner_tag 'login_spinner' %>
       </div>
     </div>
