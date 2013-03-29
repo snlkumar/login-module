@@ -3,6 +3,7 @@ class LocalDevise::OmniauthCallbacksController < Devise::OmniauthCallbacksContro
   def all
     user = User.from_omniauth(request.env["omniauth.auth"])
     if user.persisted?
+      user.role = 'user'
       flash.notice = t(:signed_in, :scope => 'devise.sessions')
       log_sign_in user
       sign_in_and_redirect(user)
