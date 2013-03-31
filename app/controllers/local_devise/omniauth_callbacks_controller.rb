@@ -6,7 +6,8 @@ class LocalDevise::OmniauthCallbacksController < Devise::OmniauthCallbacksContro
       user.role = 'user'
       flash.notice = t(:signed_in, :scope => 'devise.sessions')
       log_sign_in user
-      sign_in_and_redirect(user)
+      sign_in(user)
+      redirect_to(request.env['omniauth.origin'] || root_path)
     else
       session["devise.user_attributes"] = user.attributes
       redirect_to new_user_registration_url
