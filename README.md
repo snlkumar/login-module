@@ -23,12 +23,17 @@ March 2013:
 
 2. Register your application with Twitter. 
 
-3. Edit the `config/database.yml` and `config/private.yml` files.
+3. Update the `config/database.yml` and `config/private.yml` files.
 
-  The `config/private.yml` file contains the individual information not appropriate for saving in a public repository.
+  The `config/private.yml` file contains the settings not appropriate for saving in a public repository.
 
-  These two files are listed in `.gitignore` so your local changes will not be overwritten with subsequent updates. The file `config/private.yml.todo` contains any modifications to `config/private.yml` that will need to be updated locally.
-
+  ```
+  cp config/database-yml.todo config/database.yml
+  cp config/private.yml.todo config/private.yml
+  ```
+  
+  Update the two files with your project specific settings.
+  
 4. Update what's necessary for your hosting. Such as creating the `./tmp` and `./log` directories, editing the ngnix conf, etc.
 
 ###Capistrano
