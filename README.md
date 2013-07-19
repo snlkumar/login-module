@@ -25,15 +25,15 @@ March 2013:
 
 3. Update the `config/database.yml` and `config/private.yml` files.
 
-  The `config/private.yml` file contains the settings not appropriate for saving in a public repository.
-
   ```
   cp config/database-yml.todo config/database.yml
   cp config/private.yml.todo config/private.yml
   ```
   
   Update the two files with your project specific settings.
-  
+
+  `config/private.yml` contains the settings not appropriate for saving in a public repository.
+
 4. Update what's necessary for your hosting. Such as creating the `./tmp` and `./log` directories, editing the ngnix conf, etc.
 
 ###Capistrano
