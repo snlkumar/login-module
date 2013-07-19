@@ -23,14 +23,14 @@ March 2013:
 
 2. Register your application with Twitter. 
 
-3. Update the `config/database.yml` and `config/private.yml` files.
+3. Add `config/database.yml` and `config/private.yml`.
 
   ```
   cp config/database-yml.todo config/database.yml
   cp config/private.yml.todo config/private.yml
   ```
   
-  Update the two files with your project specific settings.
+  Update the two new files with your project specific settings.
 
   `config/private.yml` contains the settings not appropriate for saving in a public repository.
 
