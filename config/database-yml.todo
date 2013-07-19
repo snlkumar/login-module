@@ -41,3 +41,4 @@ production:
   username: example_prod
   password: 123123
   socket: /var/lib/mysql/mysql.sock
+
