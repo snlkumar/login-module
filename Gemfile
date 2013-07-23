@@ -27,7 +27,7 @@ group :development do
 end
 
 gem "less-rails"
-gem 'twitter-bootstrap-rails', '2.2.6'
+gem 'twitter-bootstrap-rails'
 
 gem 'jquery-rails'
 
