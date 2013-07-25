@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   #attr_accessible :email, :password, :password_confirmation, :remember_me
   #attr_accessible :title, :body
 
-  devise :database_authenticatable, :registerable, :rememberable, :trackable, :validatable, :recoverable, :omniauthable
+  devise :database_authenticatable, :registerable, :rememberable, :trackable, :validatable, :recoverable,  :confirmable, :omniauthable
   attr_accessible :username, :email, :password, :password_confirmation, :remember_me, :role, :image_url
   
   # /DEVISE and OmniAuth
@@ -52,8 +52,28 @@ class User < ActiveRecord::Base
     end
   end
 
-  def email_required?
+  #def email_required?
+    #false
+  #end
+  
+  def self.user_exists_but_email_is_unconfirmed?(username)
+    user = find_by_username(username)
+    return user.email_unconfirmed? if user
     false
+  end
+  
+  def email_unconfirmed?
+    (!self.email.blank? && !self.confirmed?) || !self.unconfirmed_email.blank?
+  end
+  
+  def self.fetch_email(username)
+    user = self.find_by_username(username) if username
+    user.email if user
+  end
+
+  def self.fetch_unconfirmed_email(username)
+    user = self.find_by_username(username) if username
+    user.unconfirmed_email if user
   end
 
   # handle roles

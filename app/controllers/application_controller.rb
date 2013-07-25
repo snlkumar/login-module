@@ -11,7 +11,15 @@ class ApplicationController < ActionController::Base
   def check_access_level(role)
      redirect_to dashboard_path unless current_user.role_access?(role)
   end
-
+  
+  def after_omniauth_failure_path_for(resource)
+    dashboard_path
+  end
+  
+  def after_inactive_sign_up_path_for(resource)
+    dashboard_path
+  end
+  
   # for passing around flash messages to/from js.erb
   def current_msg
     return session[:msg] if defined?(session[:msg])

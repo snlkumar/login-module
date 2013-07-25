@@ -23,6 +23,7 @@ en:
       inactive: 'Your account was not activated yet.'
       unable_send_password_email: 'Unable to send email for changing password'
       unable_to_find_users_email: 'No email address found for username'
+      unable_to_sign_in_to_twitter: 'Unable to sign-in. Error returned by Twitter.'
     sessions:
       signed_in: 'Signed in successfully.'
       signed_out: 'Signed out successfully.'

@@ -21,7 +21,9 @@
       </div>
     <% end %>
   </div>
-  <div class="modal-footer">
-    <%= t(:already_registered, scope: :'myinfo.messages') -%> <%=link_to t(:login, scope: :'myinfo.menu'), fb_login_path, :remote => true %>   
-  </div>
+  <% unless resource.provider.present? -%>
+    <div class="modal-footer">
+      <%= t(:already_registered, scope: :'myinfo.messages') -%> <%=link_to t(:login, scope: :'myinfo.menu'), fb_login_path, :remote => true %>   
+    </div>
+  <% end -%>
 </div>

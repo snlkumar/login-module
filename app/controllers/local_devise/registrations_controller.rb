@@ -3,13 +3,18 @@ class LocalDevise::RegistrationsController < Devise::RegistrationsController
 # NOTE: some functionality has been removed for this project - check parent controller
 
   def create
-    build_resource
+    build_resource(sign_up_params)
     resource.role = User.user_role
-    
+
     if resource.save
-      sign_in(resource_name, resource)
-      log_sign_in
-      set_msg t(:signed_up, :scope => 'devise.registrations')
+      if resource.active_for_authentication?
+        sign_in(resource_name, resource)
+        log_sign_in
+        set_msg t(:signed_up, :scope => 'devise.registrations')
+      else
+        set_msg t(:"signed_up_but_#{resource.inactive_message}", :scope => 'devise.registrations')
+        expire_session_data_after_sign_in!
+      end
     else
       clean_up_passwords resource
       respond_to do |format|
@@ -26,7 +31,11 @@ class LocalDevise::RegistrationsController < Devise::RegistrationsController
 
     if resource.update_with_password(resource_params)
       sign_in resource_name, resource, :bypass => true
-      set_msg t(:updated, :scope => 'devise.registrations')
+      if resource.email_unconfirmed?
+        set_msg t(:updated_email, :scope => 'myinfo.devise.messages')
+      else
+        set_msg t(:updated, :scope => 'devise.registrations')
+      end
     else
       clean_up_passwords resource
       respond_to do |format|

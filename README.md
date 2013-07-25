@@ -12,6 +12,11 @@ March 2013:
 - Added user image to top nav bar. If no image from Twitter, then look for one on Gravatar
 - Email is no longer required.
 
+July 2013:
+
+- Restore email requirement, including with Twitter login
+- Add Devise email confirmation (including confirmation email resend based on username)
+
 ##Installation
 
 1. Download the zip file or clone this repository, then run:

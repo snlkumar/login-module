@@ -62,6 +62,7 @@ Myinfo::Application.routes.draw do
   devise_for :users, :controllers => { :sessions => 'local_devise/sessions', 
                                        :registrations => 'local_devise/registrations', 
                                        :passwords => 'local_devise/passwords', 
+                                       :confirmations => 'local_devise/confirmations', 
                                        :omniauth_callbacks => 'local_devise/omniauth_callbacks'}
   devise_scope :users do
     get '/users', :to => 'dashboard#index', :as => :user_root

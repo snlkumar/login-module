@@ -53,8 +53,10 @@ en:
 #
     devise:
       failure:
-        unable_to_find_email: "Unable to find an email address for this user. Did you sign in with Twitter?"
+        unable_to_find_email: "Unable to find a verified email address for this user."
         unable_send_password_email: "Unable to send password change email. Please try again later."
+        signed_up_but_inactive_html: 'Unable to complete sign-in without email confirmation. %{resend_link}'
+        resend_confirmation_email_link_text: "Click to resend confirmation email."
       messages:
         default_new_session: "To sign in, use the Login link at the top right."
         default_new_registration: "To sign up and register as a new user, use the Sign Up link at the top right."
@@ -63,11 +65,19 @@ en:
         change_password: "Change your password"
         reset_password: "Reset password"
         reset_password_message: "An email with instuctions on how to reset your password will be sent to the email address on file."
+        account_confirmation: "Resend Account Confirmation"
+        account_confirmation_message: "An email with a confirmation link will be sent to the email address on file."
         delete_message: "Unhappy? CAUTION: This is permanent."
         provider_unchanged: "Any changes you save here will not affect your %{provider} account."
         provider_not_deleted: "This will not delete your %{provider} account."
+        twitter_email_needed: "An email address is needed to connect with Twitter."
+        updated_email: "You updated your account successfully. Remember - you will need to confirm your new email address before the next time you log in."
+        confirmation_email_sent: "Email confirmation has been resent."
+        unable_send_confirmation_email: "Unable to send confirmation email."
+        no_unconfirmed_email: "No unconfirmed email address was found for this user?"
       buttons:
         change_password: "Change password"
         send_instructions: "Send me instructions"
         delete_user_link_title: "Delete user \"%{username}\""
+        email_account_confirmation: "Send account confirmation email"
         
