@@ -73,7 +73,7 @@ class User < ActiveRecord::Base
 
   def self.fetch_unconfirmed_email(username)
     user = self.find_by_username(username) if username
-    user.unconfirmed_email if user
+    (user.unconfirmed_email.blank? ? user.email : user.unconfirmed_email) if user
   end
 
   # handle roles
