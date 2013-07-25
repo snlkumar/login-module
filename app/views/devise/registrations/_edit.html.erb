@@ -7,17 +7,19 @@
 
     <%= devise_error_messages! %>
 
+    <% email = (current_user) ? (current_user.unconfirmed_email.blank? ? current_user.email : current_user.unconfirmed_email) : "" -%>
+
     <%# TODO: move into partials -%>
     <% if current_user.provider.present? -%>
       <%# login via external provider such as twitter -%>
       <p><small><i><%= t(:provider_unchanged, scope: :'myinfo.devise.messages', :provider => current_user.provider.humanize) -%></i></small></p>
       <%= f.input :username, :disabled => true, :input_html => { :value => (current_user.username if current_user)} %>
-      <%= f.input :email, :input_html => { :autocomplete => :off, :value => (current_user.email if current_user)} %>
+      <%= f.input :email, :input_html => { :autocomplete => :off, :value => email} %>
     <% else -%>
       <%# login local to application -%>
       <%= f.input :username, :disabled => true, :input_html => { :value => (current_user.username if current_user)} %>
       <%= f.input :current_password %>
-      <%= f.input :email, :input_html => { :autocomplete => :off, :value => (current_user.email if current_user)} %>
+      <%= f.input :email, :input_html => { :autocomplete => :off, :value => email} %>
       <%= f.input :password %>
       <%= f.input :password_confirmation %>    
     <% end -%>

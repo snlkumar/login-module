@@ -4,7 +4,7 @@ class LocalDevise::OmniauthCallbacksController < Devise::OmniauthCallbacksContro
     auth = request.env["omniauth.auth"]
     if auth.valid? 
       user = User.from_omniauth(auth)
-      if user.persisted? && user.confirmed?
+      if user.persisted? && user.confirmed? && user.unconfirmed_email.blank?
         user.role = 'user' if user.role?('guest')
         flash.notice = t(:signed_in, :scope => 'devise.sessions')
         log_sign_in user
