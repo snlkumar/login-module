@@ -4,7 +4,16 @@ Example Rails 3.2 / Ruby 1.9.3 site using devise and twitter-bootstrap. Facebox 
 
 Demo site: <http://r3-dev-boot.gitrepoexamples.com>
 
-###Recent Updates
+### Updates
+
+August 2013:
+
+- Update SEO tag scheme to move tag text to I18n locale file, add noindex,nofollow to devise forms
+
+July 2013:
+
+- Restore email requirement, including with Twitter login
+- Add Devise email confirmation (including confirmation email resend based on username)
 
 March 2013:
 
@@ -12,10 +21,6 @@ March 2013:
 - Added user image to top nav bar. If no image from Twitter, then look for one on Gravatar
 - Email is no longer required.
 
-July 2013:
-
-- Restore email requirement, including with Twitter login
-- Add Devise email confirmation (including confirmation email resend based on username)
 
 ##Installation
 
