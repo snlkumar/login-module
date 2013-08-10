@@ -1,3 +1,4 @@
+<%= render :partial => 'layouts/partials/seotags', :locals => {:page_name => 'devise.passwords.edit'} -%>
   <h3><%= t(:change_password, scope: :'myinfo.devise.messages') -%></h3>
 
   <%= form_for(resource, :as => resource_name, :url => password_path(resource_name, username: params[:username]), :html => { :method => :put, :class => "form-horizontal", :data => { spinner: "#new_pwd_spinner"}}) do |f| %>

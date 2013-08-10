@@ -1,0 +1,60 @@
+en:
+  header_text:
+    fix_me: "Missing %{thing}. Fix me!"
+    branding: "rails3-devise-bootstrap-example"
+    
+    default:
+      h1: "H1 text not found. Fix me!"
+      title: "%{branding}"
+      meta_desc: "Demonstration site for github.com repo: jehughes/%{branding}"
+      meta_keywords: ""
+      robots: ""
+
+  dashboard:
+    index:
+      title: "Dashboard: %{branding}"
+      meta_desc: "Dashboard of demonstration site for github.com repo: jehughes/%{branding}"
+      h1: "Rails 3.2 / Devise / Twitter Bootstrap Demonstration Site"
+
+  help:
+    index:
+      title: "Help: %{branding}"
+      meta_desc: "Help page of demonstration site for github.com repo: jehughes/%{branding}"
+      h1: "Help"
+
+  admin:
+    index:
+      title: "User Administration Page: %{branding}"
+      meta_desc: "User administration page of demonstration site for github.com repo: jehughes/%{branding}"
+      h1: "Manage Registered Users"
+
+  devise:
+    confirmations:
+      new:
+        robots: "noindex,nofollow"
+        title: "Account Confirmation :: %{branding}"
+        meta_desc: "Account confirmation for  %{branding}"
+    sessions:
+      new:
+        robots: "noindex,nofollow"
+        title: "Sign-In :: %{branding}"
+        meta_desc: "Sign-In to %{branding}"
+    registrations:
+      new:
+        robots: "noindex,nofollow"
+        title: "Register :: %{branding}"
+        meta_desc: "Sign-up and register on %{branding}"
+      edit:
+        robots: "noindex,nofollow"
+        title: "Edit account information :: %{branding}"
+        meta_desc: "Edit private account information on %{branding}"
+    passwords:
+      new:
+        robots: "noindex,nofollow"
+        title: "New Password :: %{branding}"
+        meta_desc: "Create new password on %{branding}"
+      edit:
+        robots: "noindex,nofollow"
+        title: "Change Password :: %{branding}"
+        meta_desc: "Change password on %{branding}"
+      

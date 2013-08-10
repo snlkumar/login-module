@@ -1,2 +1,4 @@
-<% title "Help:" %>
+<%= render :partial => 'layouts/partials/seotags', :locals => {:page_name => 'help.index'} -%>
+<h1><%= get_header_text(element: 'h1') -%><%= "  <span style='color:red;font-size: 9px;'>(development)</span>".html_safe if Rails.env == 'development' -%></h1>
+
 <p>Be helpful ...</p>

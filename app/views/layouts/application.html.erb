@@ -2,10 +2,11 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title><%= yield_or_default(:title, "") -%>&nbsp;rails3-devise-bootstrap-example</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Demonstration site for github.com repo: jehughes/rails3-devise-bootstrap-example">
-  <meta name="author" content="rails3, ruby on rails, devise, twitter bootstrap, rails example">
+  
+  <title><%= yield_or_default(:title) -%></title>
+  <meta name="description" content="<%= yield_or_default(:meta_desc) -%>">
+  <meta name="keywords" content="<%= yield_or_default(:meta_keywords) -%>">
+  <meta name="robots" content="<%= yield_or_default(:robots) -%>">
   
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
