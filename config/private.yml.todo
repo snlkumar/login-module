@@ -1,5 +1,6 @@
 # Template file for private.yml
 defaults: &defaults
+    secret_token: 'somethingsecure' # 'rake secret' to generate a token
     url_host: "example.test"
     mailer_address: "smtpout.secureserver.net" # for example, this is godaddy.com
     mailer_port: 80
