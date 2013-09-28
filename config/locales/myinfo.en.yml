@@ -48,6 +48,7 @@ en:
       last_login: "Last Login"
       ip: "IP"
       login_count: "Login<br>Count"
+      provider: "External"
 #      
 #
 #

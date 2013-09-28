@@ -16,4 +16,15 @@ class LocalDevise::ConfirmationsController < Devise::ConfirmationsController
     redirect_to dashboard_path
   end
 
+  protected
+  
+  # The path used after confirmation.
+  def after_confirmation_path_for(resource_name, resource)
+    if Devise.allow_insecure_sign_in_after_confirmation
+      after_sign_in_path_for(resource)
+    else
+      dashboard_path
+    end
+  end
+
 end

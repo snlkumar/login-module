@@ -7,6 +7,7 @@
     <th><%= t(:username, scope: :'myinfo.headers') -%> <% if current_user.is_admin? -%><i class="icon-edit"><% end -%></i></th>
     <th><%= t(:email, scope: :'myinfo.headers') -%> <% if current_user.is_admin? -%><i class="icon-edit"><% end -%></i></th>
     <th><%= t(:role, scope: :'myinfo.headers') -%> <i class="icon-edit"></i></th>
+    <th><%= t(:provider, scope: :'myinfo.headers') -%></th>
     <th><%= t(:last_login, scope: :'myinfo.headers') -%></th>
     <th><%= t(:ip, scope: :'myinfo.headers') -%></th>
     <th><%= t(:login_count, scope: :'myinfo.headers').html_safe -%></th>
@@ -25,6 +26,7 @@
           <%= best_in_place_if (current_user.is_admin? and not_current), user, :username, :path => update_user_path(:id => user.id) %></td>
     <td><%= best_in_place_if (current_user.is_admin? and not_current), user, :email, :path => update_user_path(:id => user.id) %></td>
     <td><%= best_in_place_if not_current, user, :role, :type => :select, :collection => roles, :path => update_user_path(:id => user.id) %></td>
+    <td><%= display_provider(user) -%></td>
     <td><%= display_last_login(user) %></td>
     <td><%= display_last_ip(user) %></td>
     <td><%= user.sign_in_count if user.sign_in_count > 0 %></td>
