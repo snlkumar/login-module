@@ -12,6 +12,7 @@ defaults: &defaults
     ga_tracker_domain: "example.test"
     twitter_consumer_key: xxxxx # register your application at dev.twitter.co,
     twitter_consumer_secret: xxxx
+    legal_disclaimer_link: "http://ourdisclaimer.com/?i=YOUR-SITE-NAME"
 
 development:
     <<: *defaults
