@@ -10,6 +10,12 @@ role :web, "web408.webfaction.com"  # Your HTTP server, Apache/etc
 role :app, "web408.webfaction.com"  # This may be the same as your `Web` server
 role :db,  "web408.webfaction.com", :primary => true # This is where Rails migrations will run
 
+set :format, :pretty
+set :log_level, :debug
+#set :ssh_options, {
+#   verbose: :debug
+#}
+
 set :user, "jehughes"
 set :scm_username, "jehughes"
 set :use_sudo, false
