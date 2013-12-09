@@ -13,7 +13,7 @@ class LocalDevise::RegistrationsController < Devise::RegistrationsController
         set_msg t(:signed_up, :scope => 'devise.registrations')
       else
         set_msg t(:"signed_up_but_#{resource.inactive_message}", :scope => 'devise.registrations')
-        expire_session_data_after_sign_in!
+        expire_data_after_sign_in!
       end
     else
       clean_up_passwords resource
