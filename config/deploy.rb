@@ -4,23 +4,34 @@ set :application, "r3devboot"
 set :repository,  "https://github.com/jehughes/rails3-devise-bootstrap-example.git"
 set :deploy_to, "/home/jehughes/webapps/#{application}"
 
-set :scm, :git 
-
-role :web, "web408.webfaction.com"  # Your HTTP server, Apache/etc
-role :app, "web408.webfaction.com"  # This may be the same as your `Web` server
-role :db,  "web408.webfaction.com", :primary => true # This is where Rails migrations will run
-
 set :format, :pretty
 set :log_level, :debug
-#set :ssh_options, {
-#   verbose: :debug
-#}
+#set :ssh_options, {verbose: :debug}
+
+role :web, "web408.webfaction.com"
+role :app, "web408.webfaction.com"
+role :db,  "web408.webfaction.com", :primary => true
 
 set :user, "jehughes"
+
+set :scm, :git
 set :scm_username, "jehughes"
+set :branch, 'master'
+set :scm_verbose, true
+
 set :use_sudo, false
 default_run_options[:pty] = true
 set :keep_releases, 3
+
+# TODO: find a better way to do this, rvm?
+set :default_environment, {
+  'PATH' => "#{deploy_to}/gems/bin:#{deploy_to}/bin:#{ENV['PATH']}",
+  'GEM_HOME' => "#{deploy_to}/gems",
+  'BUNDLE_PATH' => "#{deploy_to}/gems" 
+}
+
+set :rails_env, :production
+set :rake, "bundle exec rake"
 
 before "deploy:finalize_update", "deploy:assets:symlink"
 after  "deploy:update_code", "deploy:assets:precompile"
