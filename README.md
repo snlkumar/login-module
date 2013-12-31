@@ -4,6 +4,9 @@ Example Rails 3.2 / Ruby 1.9.3 site using devise and twitter-bootstrap. Facebox 
 
 Demo site: <http://r3-dev-boot.gitrepoexamples.com>
 
+>There is also now a [Rails 4 Example](https://github.com/jehughes/rails4-example) application.
+
+
 ### Updates
 
 August 2013:
