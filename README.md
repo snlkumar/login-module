@@ -4,8 +4,6 @@ Example Rails 3.2 / Ruby 1.9.3 site using devise and twitter-bootstrap. Facebox 
 
 Demo site: <http://r3-dev-boot.gitrepoexamples.com>
 
->There is also now a [Rails 4 Example](https://github.com/jehughes/rails4-example) application.
-
 
 ### Updates
 
@@ -49,30 +47,26 @@ March 2013:
 
 4. Update what's necessary for your hosting. Such as creating the `./tmp` and `./log` directories, editing the ngnix conf, etc.
 
-###Capistrano
+####Capistrano
 
 Please read the comments in `config/deploy.rb` for how these two locally maintained files are treated with a Capistrano deployment.
 
-##Caveats:
+###Related Blog Posts
 
-Please note:
+Blog posts on [joanswork.com](http://joanswork.com) that provide further explanation and instruction.
 
-- There is a potential memory leak with bootstrap when working in the Rails development environment. The memory usage creeps up when I am editing bootstrap assets and doing iterative testing by just refreshing the browser and not restarting the app each time.
-- Since I didn't use all of the devise features, you'll want to compare the original devise controllers and the overriding inherited controllers for what's missing.
-- Assumes user has Javascript and cookies enabled.
-- Only tested in latest version of Chrome and Firefox.
-
+- [Using I18n for SEO related tags](http://joanswork.com/rails-seo-and-i18n-the-basics/)
 
 ##Author
 
 Joan Hughes
 
-http://www.linkedin.com/in/jehughes
+<http://www.linkedin.com/in/jehughes>
 
 ##License
 The MIT License (MIT)
 
-Copyright (c) 2013 Joan Hughes (ZoeOberon Solutions)
+Copyright (c) 2014 Joan Hughes (ZoeOberon Solutions)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
