@@ -2,7 +2,9 @@
 
 Example Rails 3.2 / Ruby 1.9.3 site using devise and twitter-bootstrap. Facebox is used for modal 'lightbox' devise forms.
 
-Demo site: <http://r3-dev-boot.gitrepoexamples.com>
+Demo site: 
+- <http://r3-dev-boot.gitrepoexamples.com> (master)
+- <http://ar3dboot.joanswork.net> (dev)
 
 
 ### Updates
