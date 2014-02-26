@@ -53,3 +53,8 @@ gem 'facebox-rails'
 gem 'google-analytics-rails'
 gem 'omniauth-twitter'
 
+# temp fix for cap deploy
+# https://github.com/net-ssh/net-ssh/issues/145
+gem 'net-ssh', '2.7.0'
+gem 'net-ssh-gateway', '1.2.0'
+

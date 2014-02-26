@@ -103,7 +103,7 @@ GEM
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
       net-ssh (>= 2.6.5)
-    net-ssh (2.8.0)
+    net-ssh (2.7.0)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
     oauth (0.4.7)
@@ -195,6 +195,8 @@ DEPENDENCIES
   jquery-rails
   less-rails
   mysql2
+  net-ssh (= 2.7.0)
+  net-ssh-gateway (= 1.2.0)
   omniauth-twitter
   rails (= 3.2.17)
   sass-rails (~> 3.2.3)
