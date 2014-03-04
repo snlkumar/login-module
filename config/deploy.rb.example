@@ -1,21 +1,21 @@
 require 'bundler/capistrano'
 
-set :application, "r3devboot"
+set :application, "[app-name]"
 set :repository,  "https://github.com/jehughes/rails3-devise-bootstrap-example.git"
-set :deploy_to, "/home/jehughes/webapps/#{application}"
+set :deploy_to, "/home/[location]/#{application}"
 
 set :format, :pretty
 set :log_level, :debug
 #set :ssh_options, {verbose: :debug}
 
-role :web, "web408.webfaction.com"
-role :app, "web408.webfaction.com"
-role :db,  "web408.webfaction.com", :primary => true
+role :web, xxx
+role :app, xxx
+role :db,  xxx, :primary => true
 
-set :user, "jehughes"
+set :user, "[user-name]"
 
 set :scm, :git
-set :scm_username, "jehughes"
+set :scm_username, "[user-name]"
 set :branch, 'master'
 set :scm_verbose, true
 
@@ -23,7 +23,7 @@ set :use_sudo, false
 default_run_options[:pty] = true
 set :keep_releases, 3
 
-# TODO: find a better way to do this, rvm?
+# TODO: find a better way to do this
 set :default_environment, {
   'PATH' => "#{deploy_to}/gems/bin:#{deploy_to}/bin:#{ENV['PATH']}",
   'GEM_HOME' => "#{deploy_to}/gems",
@@ -70,14 +70,13 @@ namespace :deploy do
   
   task :copy_git_ignored_files do
     
-    # since config/private.yml and config/database.yml are in .gitignore
-    # create the directory #{shared_path}/local_config and populate with your own YML files
-    
+    # database.yml, private.yml, locales/en.private.yml
     begin
-      run "cp #{shared_path}/local_config/*.yml #{current_path}/config"
+      run "cp -r #{shared_path}/local_config/* #{current_path}/config"
     rescue Exception
-      puts "\nCOPY OF SHARED database.yml AND/OR private.yml FAILED - CHECK THEY EXIST\n\n"
+      puts "\nCOPY OF LOCAL CONFIG FILES FAILED - CHECK THEY EXIST\n\n"
     end
+
   end
   
   task :restart_passenger do
