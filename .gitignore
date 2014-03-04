@@ -16,3 +16,4 @@
 # Don't store local settings
 /config/private.yml
 /config/database.yml
+/config/locales/en.private.yml
