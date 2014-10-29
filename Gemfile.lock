@@ -96,8 +96,13 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25.1)
     multi_json (1.10.1)
+<<<<<<< HEAD
     mysql2 (0.3.16)
     net-scp (1.2.1)
+=======
+    mysql2 (0.3.15)
+    net-scp (1.1.2)
+>>>>>>> dev
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
       net-ssh (>= 2.6.5)
@@ -139,9 +144,12 @@ GEM
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
     rake (10.3.2)
+<<<<<<< HEAD
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
+=======
+>>>>>>> dev
     rdoc (3.12.2)
       json (~> 1.4)
     ref (1.0.5)
@@ -172,8 +180,13 @@ GEM
       execjs
       rails (>= 3.1)
       railties (>= 3.1)
+<<<<<<< HEAD
     tzinfo (0.3.41)
     uglifier (2.5.3)
+=======
+    tzinfo (0.3.42)
+    uglifier (2.5.0)
+>>>>>>> dev
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     warden (1.2.3)
